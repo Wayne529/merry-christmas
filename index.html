@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="聚橙网“双旦”活动,新年券任性送,送票,演唱会,舞台剧,音乐剧,儿童剧,演出门票订购,订票" />
+    <meta name="description" content="聚橙网推出'再见2017 你好2018 聚橙暖心音乐季 丰厚新年券大派送 许愿送演出票'活动,聚橙网打造国内专业的票务网和演出订票平台，为您提供各种演唱会、流行音乐会、古典音乐、舞台剧、儿童剧演出官方在线购票服务，实时更新最新门票预定、演出信息和订票信息，安全快捷，订票热线400-185-8666" />
+    <title>聚橙暖心音乐季 新年券大派送 许愿送演出票</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+</head>
+<body>
+    <div class="qrcode-container">
+        <div class="qrcode-wrap">
+            <img src="images/qrcode.jpg" alt="" class="qrcode">
+        </div>
+        <div class="coffee"></div>
+    </div>
+    
+    <!-- 雪的特效 -->
+    <canvas id="snowCanvas" class="snow-canvas"></canvas>
+    <div class="bg bg1"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="bg bg4"></div>
+    <div class="bg bg5"></div>
+    <div class="bg bg6"></div>
+
+    <div class="container">
+        <canvas id="canvasBarrage" class="canvas-barrage"></canvas>
+        
+        <div class="section section1">
+            <div class="title"></div>
+            <div class="beauty"></div>
+            <div class="ticket">
+                <span class="t1"></span>
+                <span class="t2"></span>
+                <span class="t3"></span>
+            </div>
+            <div class="light"></div>
+        </div>
+        <div class="section section2">
+            <div class="music music1"></div>
+            <div class="swiper-module guide">
+                <div class="light-border inset">
+                </div>
+                <div class="light-border outer">
+                </div>
+                <div class="txt-wrap">
+                </div>
+            </div>
+            <div class="swiper-module purple swiper1">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        
+                    </div>
+                </div>
+                <div class="swiper-button-prev prev"></div>
+                <div class="swiper-button-next next"></div>
+            </div>
+            </div>
+        <div class="section section3">
+            <div class="music music2"></div>
+            <div class="swiper-module pink swiper2">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        
+                    </div>
+                </div>
+                <div class="swiper-button-prev prev"></div>
+                <div class="swiper-button-next next"></div>
+            </div>
+        </div>
+        <div class="section section4">
+            <div class="music music3"></div>
+            <div class="swiper-module purple swiper3">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                       
+                    </div>
+                </div>
+                <div class="swiper-button-prev prev"></div>
+                <div class="swiper-button-next next"></div>
+            </div>
+        </div>
+        <div class="section section5">
+            <div class="music music4"></div>
+            <div class="swiper-module pink swiper4">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        
+                    </div>
+                </div>
+                <div class="swiper-button-prev prev"></div>
+                <div class="swiper-button-next next"></div>
+            </div>
+        </div>
+        <div class="section section6">
+            <div class="music music5"></div>
+            <div class="swiper-module purple swiper5">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        
+                    </div>
+                </div>
+                <div class="swiper-button-prev prev"></div>
+                <div class="swiper-button-next next"></div>
+            </div>
+            <div class="footer">
+                <p class="link">
+                    <a href="http://www.juooo.com/footconfig/1" class="item">关于聚橙</a>
+                    <a href="http://www.juooo.com/footconfig/2" class="item">联系我们</a>
+                    <a href="javascript:;" class="item">加入我们</a>
+                    <a href="javascript:;" class="item">加盟聚橙</a>
+                    <a href="http://www.juooo.com/footconfig/3" class="item">服务条款</a>
+                    <a href="http://www.juooo.com/news/newslist/" class="item">媒体报道</a>
+                    <a href="http://www.juooo.com/about/partner" class="item">合作伙伴</a>
+                    <a href="http://www.juooo.com/about/map" class="item">网站地图</a>
+                </p>
+                <p>全国统一客服电话：400-185-8666 深圳市聚橙网络技术有限公司</p>
+                <p>Copyright 2007-2017 聚橙网 粤B2-20070272 | 粤ICP备09218027号</p>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/swiper-3.4.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.let_it_snow.min.js"></script>
+    <script>
+        $(function(){
+
+            var showData = [
+                            { "type": "新年音乐会", "name": "意大利那不勒斯皇家爱乐乐团访华新年音乐会", "city": ["宁波", "昆明", "广州", "杭州", "成都"], "time": "2017.12.27-2018.01.07", "slogan": "重温经典名作", "url": "http://search.juooo.com/?k=%E9%82%A3%E4%B8%8D%E5%8B%92%E6%96%AF&sort=1&host=1", "img": "http://image.juooo.com/group1/M00/00/26/rAoKmVkaqJeADmvjAAEOOMA6J1A240.jpg" },
+                            { "type": "新年音乐会", "name": "维也纳施特劳斯管弦乐团2018新年音乐会", "city": ["广州", "深圳", "厦门", "无锡", "合肥", "重庆", "长沙", "宜昌", "石家庄", "北京", "大连", "成都"], "time": "2017.12.27-2018.01.14", "slogan": "新年视听盛宴", "url": "http://search.juooo.com/?k=%E7%BB%B4%E4%B9%9F%E7%BA%B3%E6%96%BD%E7%89%B9%E5%8A%B3%E6%96%AF&sort=1&host=1", "img": "http://image.juooo.com/group1/M00/01/77/rAoKNVonsCOABvG1AACFqkjfuRc754.jpg" },
+                            { "type": "新年音乐会", "name": "最后的莫西干人", "city": ["上海", "昆明", "深圳"], "time": "2017.12.29-2018.01.11", "slogan": "神秘的印第安", "url": "http://search.juooo.com/?k=%E6%9C%80%E5%90%8E%E7%9A%84%E8%8E%AB%E8%A5%BF%E5%B9%B2%E4%BA%BA&sort=1&host=1", "img": "http://image.juooo.com/group1/M00/00/9E/rAoKmVnNpBCAJYzRAAClGqRYFso015.jpg" },
+                            { "type": "新年音乐会", "name": "“千与千寻”宫崎骏·久石让动漫视听系列主题音乐会", "city": ["西安", "宜昌", "昆明"], "time": "2017.12.30-2018.03.25", "slogan": "回味经典动漫", "url": "http://search.juooo.com/?k=%E5%8D%83%E4%B8%8E%E5%8D%83%E5%AF%BB&sort=1&host=1", "img": "http://image.juooo.com/group1/M00/00/00/rAoKmVi2s02AET-iAAGeqSQsttE103.jpg" },
+                            { "type": "新年音乐会", "name": "“魔女宅急便”宫崎骏·久石让动漫视听系列主题音乐会", "city": ["西安"], "time": "2018.01.13", "slogan": "唤醒童年回忆", "url": "http://item.juooo.com/81895", "img": "http://image.juooo.com/group1/M00/01/6E/rAoKNVobioqAFgteAADV1DcJ6po767.jpg" },
+                            { "type": "新年音乐会", "name": "“一个朋友”小旭十年动漫游戏创意音乐会", "city": ["上海"], "time": "2017.12.30", "slogan": "ACG音乐会", "url": "http://item.juooo.com/81470", "img": "http://image.juooo.com/group1/M00/00/C8/rAoKmVof0Q6AT_IFAADKzl2EbnQ356.jpg" },
+                            { "type": "新年音乐会", "name": "世界树次元幻想世界之窗音乐节", "city": ["深圳"], "time": "2017.12.31", "slogan": "古风动漫LIVE", "url": "http://item.juooo.com/82790", "img": "http://image.juooo.com/group1/M00/00/CF/rAoKmVopEVGAMSaAAADfcvPrnYo572.jpg" },
+                            { "type": "新年音乐会", "name": "钢琴竹笛的对话 陈霓 刘奕成新年专场音乐会", "city": ["重庆"], "time": "2017.12.30", "slogan": "钢琴对话竹笛", "url": "http://item.juooo.com/82661", "img": "http://image.juooo.com/group1/M00/00/BF/rAoKmVoThH6ALaMwAACBvAkB6oE786.jpg" },
+                            { "type": "新年音乐会", "name": "吴声清婉--裴金宝师生古琴音乐会", "city": ["苏州"], "time": "2018.01.27", "slogan": "聆听太古之音", "url": "http://item.juooo.com/83063", "img": "http://image.juooo.com/group1/M00/01/77/rAoKNVonwK-AZCyqAACE39Kmlmo464.jpg" },
+                            { "type": "暖心演唱会", "name": "刘瑞琦“温暖的房间”2017巡回演唱会", "city": ["无锡", "宁波"], "time": "2017.12.29-2018.01.20", "slogan": "温暖小清新", "url": "http://search.juooo.com/?k=%E5%88%98%E7%91%9E%E7%90%A6&sort=1&host=1", "img": "http://image.juooo.com/group1/M00/00/C0/rAoKNVj1dFqAcNrpAAIjQgzhs7Q949.jpg" },
+                            { "type": "暖心演唱会", "name": "刘思涵“同伙”LIVE 2017巡回演唱会", "city": ["深圳", "北京", "广州"], "time": "2017.12.29-2018.01.20", "slogan": "东方Adele", "url": "http://search.juooo.com/?k=%E5%88%98%E6%80%9D%E6%B6%B5&sort=1&host=1", "img": "http://image.juooo.com/group1/M00/01/45/rAoKNVnLOz2AHqcBAAC2KguF61I918.jpg" },
+                            { "type": "暖心演唱会", "name": "“等待你出现”—小野丽莎2017演唱会", "city": ["天津", "辽宁"], "time": "2017.12.31-2018.01.02", "slogan": "Bossa Nova", "url": "http://search.juooo.com/?k=%E5%B0%8F%E9%87%8E%E4%B8%BD%E8%8E%8E&sort=1&host=1", "img": "http://image.juooo.com/group1/M00/00/8E/rAoKmVm2AMiAND9QAADXfROhvAE621.jpg" },
+                            { "type": "暖心演唱会", "name": "“雪的物语”——熊木杏里出道15周年纪念巡回演唱会", "city": ["上海", "重庆", "成都", "大连", "北京"], "time": "2017.12.26-2017.12.31", "slogan": "治愈系女声", "url": "http://search.juooo.com/?k=%E7%86%8A%E6%9C%A8%E6%9D%8F%E9%87%8C&sort=1&host=1", "img": "http://image.juooo.com/group1/M00/00/E3/rAoKNVkufb2APsCUAAD0icD75NQ986.jpg" },
+                            { "type": "暖心演唱会", "name": "《霓NEED》——阿悄2017全国巡回演唱会", "city": ["北京", "武汉"], "time": "2017.12.29-2018.01.06", "slogan": "独特的甜美嗓", "url": "http://search.juooo.com/?k=%E9%98%BF%E6%82%84&sort=1&host=1", "img": "http://image.juooo.com/group1/M00/00/8A/rAoKmVms-iqAHLQHAADHLNqBJlQ623.jpg" },
+                            { "type": "暖心演唱会", "name": "《月亮代表我的心》邓丽君金曲杨洁2018巡回演唱会", "city": ["广州", "成都"], "time": "2018.01.02-2018.01.06", "slogan": "重现邓丽君", "url": "http://search.juooo.com/?k=%E6%9D%A8%E6%B4%81&sort=1&host=1", "img": "http://image.juooo.com/group1/M00/00/C5/rAoKmVobbpmAOCNNAAC1AjWOfSo999.jpg" },
+                            { "type": "暖心演唱会", "name": "“生命中的时光”齐一2018音乐会", "city": ["深圳"], "time": "2018.01.12", "slogan": "独立音乐人", "url": "http://item.juooo.com/82201", "img": "http://image.juooo.com/group1/M00/01/59/rAoKNVn4OzKADMucAABuj1-pME4277.jpg" },
+                            { "type": "暖心演唱会", "name": "陈佳2018追忆邓丽君演唱会", "city": ["合肥"], "time": "2018.01.13", "slogan": "追忆邓丽君", "url": "http://item.juooo.com/82720", "img": "http://image.juooo.com/group1/M00/01/6D/rAoKNVoXmfWACjKPAADC9ZtXnaA373.jpg" },
+                            { "type": "暖心演唱会", "name": "麦斯米兰“Sea of Silence”寂静如海 2018巡回演唱会", "city": ["宁波", "深圳", "昆明", "重庆", "武汉", "北京"], "time": "2018.04.21-2018.05.13", "slogan": "北欧创作男神", "url": "http://search.juooo.com/?k=%E9%BA%A6%E6%96%AF%E7%B1%B3%E5%85%B0&sort=1&host=1", "img": "http://image.juooo.com/group1/M00/00/A7/rAoKmVnpnQyAXy1JAABYOJPzD50405.jpg" },
+                            { "type": "暖心演唱会", "name": "简弘亦“柔软的国”2018巡回演唱会", "city": ["杭州", "深圳", "上海"], "time": "2018.05.05-2018.05.19", "slogan": "深情火山音", "url": "http://search.juooo.com/?k=%E7%AE%80%E5%BC%98%E4%BA%A6&sort=1&host=1", "img": "http://image.juooo.com/group1/M00/00/B4/rAoKmVoAC6uABAp1AAB12Bw2VIQ553.jpg" },
+                            { "type": "暖心演唱会", "name": "Keren Ann 2018 中国巡演", "city": ["深圳"], "time": "2018.04.29", "slogan": "法国民谣才女", "url": "http://item.juooo.com/82891", "img": "http://image.juooo.com/group1/M00/01/79/rAoKNVoo_DSAO47pAABkrdGWhMo017.jpg" },
+                            { "type": "暖心演唱会", "name": "“远扬十年·海角重现”岛歌王子中孝介2018巡回演唱会", "city": ["深圳"], "time": "2018.05.26", "slogan": "柔情岛歌王子", "url": "http://item.juooo.com/82744", "img": "http://image.juooo.com/group1/M00/00/C6/rAoKmVodBcaAE-NtAABuhKbkyhA760.jpg" },
+                            { "type": "暖心演唱会", "name": "My Song--Sophie Zelmani 苏菲 · 珊曼妮2018巡回演唱会", "city": ["石家庄", "无锡", "昆明", "深圳"], "time": "2018.06.08-2018.06.29", "slogan": "瑞典民谣女神", "url": "http://search.juooo.com/?k=%E8%8B%8F%E8%8F%B2+%C2%B7+%E7%8F%8A%E6%9B%BC%E5%A6%AE&sort=1&host=1", "img": "http://image.juooo.com/group1/M00/00/CF/rAoKmVoo-7uAA75MAABn3d17voE861.jpg" },
+                            {
+                                "type": "口碑音乐剧",
+                                "name": "法语原版经典音乐剧《罗密欧与朱丽叶》",
+                                "city": ["深圳", "上海", "杭州"],
+                                "time": "2018.03.29-2018.04.29",
+                                "slogan": "浪漫巅峰巨作",
+                                "url": "http://search.juooo.com/?k=%E7%BD%97%E5%AF%86%E6%AC%A7%E4%B8%8E%E6%9C%B1%E4%B8%BD%E5%8F%B6",
+                                "img": "http://image.juooo.com/group1/M00/00/B5/rAoKmVoCbWWAYiDmAADZVO-9QdM948.jpg"
+                            },
+                            { "type": "口碑音乐剧", "name": "百老汇原版摇滚音乐剧《吉屋出租》二十周年巡演", "city": ["上海", "北京"], "time": "2018.08.30-2018.10.17", "slogan": "史上获奖最多", "url": "http://search.juooo.com/?k=%E5%90%89%E5%B1%8B%E5%87%BA%E7%A7%9F", "img": "http://image.juooo.com/group1/M00/00/A8/rAoKmVntSC2ASHskAADrrpOgpu0379.jpg" },
+                            { "type": "口碑音乐剧", "name": "百老汇原版音乐剧《金牌制作人》", "city": ["深圳"], "time": "2018.01.18-2018.01.21", "slogan": "爆笑暖心贺岁", "url": "http://item.juooo.com/81810", "img": "http://image.juooo.com/group1/M00/00/9D/rAoKmVnMpWqALelkAADY0y3eErw632.jpg" },
+                            { "type": "口碑音乐剧", "name": "百老汇音乐剧《Fame名扬四海》中文版", "city": ["深圳", "广州", "北京"], "time": "2018.01.03-2018.01.20", "slogan": "风靡全美30年", "url": "http://search.juooo.com/?k=%E5%90%8D%E6%89%AC%E5%9B%9B%E6%B5%B7&sort=1&host=1", "img": "http://image.juooo.com/group1/M00/00/88/rAoKmVmo_YCAHTegAADTDJ6SF5Y320.jpg" },
+                            {
+                                "type": "口碑音乐剧",
+                                "name": "法国浪漫歌舞音乐剧《多彩巴黎》",
+                                "city": ["宜昌", "重庆"],
+                                "time": "2017.12.27-2017.12.28",
+                                "slogan": "法式浪漫爱情",
+                                "url": "http://search.juooo.com/?k=%E5%A4%9A%E5%BD%A9%E5%B7%B4%E9%BB%8E&sort=1&host=1",
+                                "img": "http://image.juooo.com/group1/M00/01/46/rAoKNVnLfNGAUntsAAD7lyH34MI932.jpg"
+                            },
+                            {
+                                "type": "魅力舞蹈剧",
+                                "name": "俄罗斯皇冠芭蕾舞团《天鹅湖》",
+                                "city": ["长沙", "武汉",
+                                    "重庆",
+                                    "昆明",
+                                    "合肥",
+                                    "杭州",
+                                    "宁波"],
+                                "time": "2017.12.28-2018.01.07",
+                                "slogan": "芭蕾舞剧经典",
+                                "url": "http://search.juooo.com/?k=%E5%A4%A9%E9%B9%85%E6%B9%96&sort=1&host=1",
+                                "img": "http://image.juooo.com/group1/M00/00/C8/rAoKNVkJa-CAT11tAADusOlYT1o534.jpg"
+                            },
+                            {
+                                "type": "魅力舞蹈剧",
+                                "name": "乌克兰基辅芭蕾舞团《天鹅湖》",
+                                "city": ["石家庄"],
+                                "time": "2017.12.31",
+                                "slogan": "旷世名作",
+                                "url": "http://item.juooo.com/82113",
+                                "img": "http://image.juooo.com/group1/M00/01/57/rAoKNVnzByiADe8JAAOKCtU83eg610.png"
+                            },
+                            { "type": "魅力舞蹈剧", "name": "乌克兰基辅芭蕾舞团《胡桃夹子》", "city": ["石家庄"], "time": "2018.01.01", "slogan": "奇幻的梦境", "url": "http://item.juooo.com/81969", "img": "http://image.juooo.com/group1/M00/01/6F/rAoKNVob4vqAWqOJAADu-efnLE4612.jpg" },
+                            { "type": "魅力舞蹈剧", "name": "乌克兰基辅芭蕾舞团《睡美人》", "city": ["石家庄"], "time": "2018.01.02", "slogan": "永恒的童话", "url": "http://item.juooo.com/82709", "img": "http://image.juooo.com/group1/M00/01/6C/rAoKNVoWp5iAJygEAAC8EPBh1I4816.jpg" },
+                            { "type": "魅力舞蹈剧", "name": "中央芭蕾舞团经典芭蕾舞剧《红色娘子军》", "city": ["石家庄"], "time": "2018.01.23", "slogan": "40年久演不衰", "url": "http://item.juooo.com/81849", "img": "http://image.juooo.com/group1/M00/01/49/rAoKNVnPSQWAISNpAADIZZNkMKE665.jpg" },
+                            { "type": "亲子儿童剧", "name": "艾美奖舞团年度巨献大型影子舞蹈剧《梦女孩的幻影漂流》", "city": ["深圳"], "time": "2018.01.01", "slogan": "奇幻影子舞", "url": "http://item.juooo.com/82194", "img": "http://image.juooo.com/group1/M00/01/5C/rAoKNVn7y5qAVTusAABtGxnukoY747.jpg" },
+                            {
+                                "type": "亲子儿童剧", "name": "家庭音乐剧四季剧团首部海外授权中文版音乐剧《想变成人的猫》", "city": ["宁波", "无锡",
+                                    "武汉",
+                                    "上海"], "time": "2017.12.29-2018.03.08", "slogan": "经典催泪呈现", "url": "http://search.juooo.com/?k=%E6%83%B3%E5%8F%98%E6%88%90%E4%BA%BA%E7%9A%84%E7%8C%AB&sort=1&host=1", "img": "http://image.juooo.com/group1/M00/01/17/rAoKNVlxYAmAU5lWAACGWkRWo7o145.jpg"
+                            },
+                            { "type": "亲子儿童剧", "name": "寻梦亲子音乐剧《Flight School飞行学校》", "city": ["佛山", "河源", "南宁", "泉州"], "time": "2018.01.13-2018.04.01", "slogan": "企鹅的飞行梦", "url": "http://search.juooo.com/?k=%E9%A3%9E%E8%A1%8C%E5%AD%A6%E6%A0%A1&sort=1&host=1", "img": "http://image.juooo.com/group1/M00/00/F9/rAoKNVlDs7SAPpgNAADZOkKRzlw875.jpg" },
+                            { "type": "亲子儿童剧", "name": "经典亲子音乐剧《寻梦的猫》", "city": ["南宁", "泉州", "莆田", "广州", "宜昌"], "time": "2018.01.14-2018.03.25", "slogan": "背负梦想的猫", "url": "http://search.juooo.com/?k=%E5%AF%BB%E6%A2%A6%E7%9A%84%E7%8C%AB&sort=1&host=1", "img": "http://image.juooo.com/group1/M00/00/74/rAoKOVgsOFGAZg1XAANh4R4v8ks184.png" },
+                            { "type": "亲子儿童剧", "name": "神奇泡泡之科学音乐剧《爱迪生的泡泡实验室》", "city": ["杭州", "上海"], "time": "2018.01.20-2018.01.21", "slogan": "精彩互动体验", "url": "http://search.juooo.com/?k=%E7%88%B1%E8%BF%AA%E7%94%9F%E7%9A%84%E6%B3%A1%E6%B3%A1%E5%AE%9E%E9%AA%8C%E5%AE%A4&sort=1&host=1", "img": "http://image.juooo.com/group1/M00/00/2A/rAoKmVkk8-yAL82oAAEKghVD51g911.jpg" }
+                        ];
+            getShowData(showData)            
+            function getShowData(res){
+                var swiperHtml1 = '';
+                var swiperHtml2 = '';
+                var swiperHtml3 = '';
+                var swiperHtml4 = '';
+                var swiperHtml5 = '';
+                for (var i = 0; i < res.length; i++) {
+                    var dataObj = res[i];
+                    var slideHtml = '<div class="swiper-slide">' +
+                        '<div class="img-wrap">' +
+                        '<span class="corner-mark">' + dataObj.slogan + '</span>' +
+                        '<img src="' + dataObj.img + '" alt="">' +
+                        '<div class="mask">' +
+                        '<img src="images/qrcode.jpg" alt="">' +
+                        '<p class="tip">扫码领神券</p>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>';
+                    switch (dataObj.type) {
+                        case '新年音乐会':
+                            swiperHtml1 += slideHtml;
+                            break;
+                        case '暖心演唱会':
+                            swiperHtml2 += slideHtml;
+                            break;
+                        case '口碑音乐剧':
+                            swiperHtml3 += slideHtml;
+                            break;
+                        case '魅力舞蹈剧':
+                            swiperHtml4 += slideHtml;
+                            break;
+                        default:
+                            swiperHtml5 += slideHtml;
+                            break;
+                    }
+                }  
+                $('.swiper1 .swiper-wrapper').html(swiperHtml1);
+                $('.swiper2 .swiper-wrapper').html(swiperHtml2);
+                $('.swiper3 .swiper-wrapper').html(swiperHtml3);
+                $('.swiper4 .swiper-wrapper').html(swiperHtml4);
+                $('.swiper5 .swiper-wrapper').html(swiperHtml5);
+                swiperInit();              
+            }
+
+            //遍历初始化swiper
+            function swiperInit() {
+                var swiperDom = $('.swiper-module:not(".guild")');//获取图片的swiper
+                //console.log(swiperDom.length)
+                for (var i = 0; i < swiperDom.length; i++) {
+                    var swiperSelector = '.swiper' + i + ' .swiper-container';
+                    var prevSelector = '.swiper' + i + ' .prev';
+                    var nextSelector = '.swiper' + i + ' .next';
+                    var showSwiper = new Swiper(swiperSelector, {
+                        prevButton: prevSelector,
+                        nextButton: nextSelector,
+                        slidesPerView: 4,
+                        spaceBetween: 32,
+                        autoplay: 2000,
+                        grabCursor: true,
+                        autoplayDisableOnInteraction: true
+                    });
+                }
+
+            };
+
+
+
+            var res = { "code": 200, "list": [{ "id": "26", "text": "\u5bc6\u7801\u5bc6\u7801\u6728\u6728\u6728\u6728\u6728\u6728\u6728\u6728\u6728\u6216\u6216\u6216\u6216\u6216\u6216\u6216\u6216\u6216" }, { "id": "25", "text": "44" }, { "id": "24", "text": "11" }, { "id": "23", "text": "333333333333" }, { "id": "22", "text": "33" }, { "id": "21", "text": "\u8fd9\u662f\u4e00\u4e2a\u6587\u672c" }, { "id": "20", "text": "\u8fd9\u662f\u4e00\u4e2a\u6587\u672c" }, { "id": "19", "text": "\u8fd9\u662f\u4e00\u4e2a\u6587\u672c" }, { "id": "18", "text": "\u8fd9\u662f\u4e00\u4e2a\u6587\u672c" }, { "id": "16", "text": "\u6211\u5c31\u662f\u4e00\u6761yu" }, { "id": "15", "text": "\u6211\u5c31\u662f\u4e00\u6761yu" }, { "id": "13", "text": "\u6211\u5c31\u662f\u4e00\u6761\u7559\u8a00" }, { "id": "12", "text": "\u6211\u5c31\u662f\u4e00\u6761\u7559\u8a00" }, { "id": "11", "text": "\u6211\u5c31\u662f\u4e00\u6761\u7559\u8a00" }, { "id": "10", "text": "\u6211\u5c31\u662f\u4e00\u6761\u7559\u8a00" }, { "id": "9", "text": "\u6211\u5c31\u662f\u4e00\u6761\u7559\u8a00" }, { "id": "8", "text": "\u6211\u5c31\u662f\u6761\u7559\u8a00" }, { "id": "7", "text": "\u6211\u5c31\u662f\u4e00\u7559\u8a00" }, { "id": "6", "text": "\u6211\u5c31\u662f\u4e00\u6761\u7559\u8a00" }, { "id": "5", "text": "\u6211\u5c31\u662f\u6761\u7559\u8a00" }, { "id": "4", "text": "\u6211\u5c31\u662f\u4e00\u6761\u7559" }, { "id": "3", "text": "\u6211\u5c31\u662f\u4e00\u6761\u7559" }], "total": "22" }
+            function convertBarrageData(resList) {
+                var barrageArray = [];
+                for(var i=0;i<resList.length;i++){
+                    var barrageObj = {};
+                    barrageObj.value = resList[i].text;
+                    //barrageObj.color = '#' + Math.floor(Math.random() * 0xffffff).toString(16);
+                    //barrageObj.color = '#fff3e7' ;
+                    barrageObj.range = [Math.floor(Math.random() * 5)/10, Math.floor(Math.random() * 5+6)/10];
+                    barrageArray.push(barrageObj);
+                }
+                //console.log(barrageArray);
+                return barrageArray;
+            }
+
+            var dataBarrage = convertBarrageData(res.list);
+            // 弹幕数据
+               /*      var dataBarrage = [{
+                        value: '使用的是静态死数据',
+                        color: 'blue',
+                        range: [0, 0.5]
+                    }, {
+                        value: '随机循环播放',
+                        color: 'blue',
+                        range: [0, 0.6]
+                    }, {
+                        value: '可以控制区域和垂直分布范围',
+                        color: 'blue',
+                        range: [0, 0.5]
+                    }, {
+                        value: '字体大小和速度在方法内设置',
+                        color: 'black',
+                        range: [0.1, 1]
+                    }, {
+                        value: '适合用在一些静态页面上',
+                        color: 'black',
+                        range: [0.2, 1]
+                    }, {
+                        value: '基于canvas实现',
+                        color: 'black',
+                        range: [0.2, 0.9]
+                    }, {
+                        value: '因此IE9+浏览器才支持',
+                        color: 'black',
+                        range: [0.2, 1]
+                    }]; */
+                //弹幕的方法
+                var canvasBarrage = function (canvas, data) {
+                    if (!canvas || !data || !data.length) {
+                        return;
+                    }
+                    if (typeof canvas == 'string') {
+                        canvas = document.querySelector(canvas);
+                        canvasBarrage(canvas, data);
+                        return;
+                    }
+                    var context = canvas.getContext('2d');
+                    canvas.width = canvas.clientWidth;
+                    canvas.height = canvas.clientHeight;
+
+                    // 存储实例
+                    var store = {};
+
+                    // 字号大小
+                    var fontSize = 22;
+
+                    // 实例方法
+                    var Barrage = function (obj, index) {
+                        // 随机x坐标也就是横坐标，对于y纵坐标，以及变化量moveX
+                        this.x = (1 + index * 0.1 / Math.random()) * canvas.width;
+                        this.y = obj.range[0] * canvas.height + (obj.range[1] - obj.range[0]) * canvas.height * Math.random() + 36;
+                        if (this.y < fontSize) {
+                            this.y = fontSize;
+                        } else if (this.y > canvas.height - fontSize) {
+                            this.y = canvas.height - fontSize;
+                        }
+                        this.moveX = 1 + Math.random() * 3;
+
+                        //this.opacity = 0.8 + 0.2 * Math.random();
+                        this.opacity = 0.2 * (Math.floor(Math.random() * 5) + 1);
+                        this.params = obj;
+
+                        this.draw = function () {
+                            var params = this.params;
+                            // 根据此时x位置绘制文本
+                            //context.strokeStyle = params.color;
+                            context.strokeStyle = 'rgba(255,243,231,' + this.opacity + ')';
+                            //context.font = 'normal ' + fontSize + 'px "microsoft yahei", sans-serif';
+                            context.font = 'normal ' + fontSize + 'px "microsoft yahei", sans-serif';
+                            context.fillStyle = 'rgba(255,243,231,' + this.opacity + ')';
+                            context.fillText(params.value, this.x, this.y);
+                            context.strokeText(params.value, this.x, this.y);
+                        };
+                    };
+
+                    data.forEach(function (obj, index) {
+                        store[index] = new Barrage(obj, index);
+                    });
+
+                    // 绘制弹幕文本
+                    var draw = function () {
+                        for (var index in store) {
+                            var barrage = store[index];
+                            // 位置变化
+                            barrage.x -= barrage.moveX;
+                            if (barrage.x < -1 * canvas.width * 1.5) {
+                                // 移动到画布外部时候从左侧开始继续位移
+                                barrage.x = (1 + index * 0.1 / Math.random()) * canvas.width;
+                                barrage.y = (barrage.params.range[0] + (barrage.params.range[1] - barrage.params.range[0]) * Math.random()) * canvas.height;
+                                if (barrage.y < fontSize) {
+                                    barrage.y = fontSize;
+                                } else if (barrage.y > canvas.height - fontSize) {
+                                    barrage.y = canvas.height - fontSize;
+                                }
+                                barrage.moveX = 1 + Math.random() * 3;
+                            }
+                            // 根据新位置绘制圆圈圈
+                            store[index].draw();
+                        }
+                    };
+
+                    // 画布渲染
+                    var render = function () {
+                        // 清除画布
+                        context.clearRect(0, 0, canvas.width, canvas.height);
+
+                        // 绘制画布上所有的圆圈圈
+                        draw();
+
+                        // 继续渲染
+                        requestAnimationFrame(render);
+                    };
+
+                    render();                    
+                }
+            canvasBarrage('#canvasBarrage', dataBarrage);
+
+            $("#snowCanvas").let_it_snow({
+                speed: 1, // How fast the snow falls can be define here. You can choose a number in between 0 - 5. The higher, the faster. The default value is 0.
+                interaction: true, // This option allows viewer to interact with the falling snow. Toggle this to false if you don't want the snow to be interactive. The default value is true.
+                size: 4, // You can set the size of the snow here. Choose a number between 0 - 10+. The higher, the bigger. The default size is 2.
+                count: 50, // This allows you to set the number of snows displayed at a time. The default count is 200.
+                opacity: 0.2, // The opacity variation of the snow. You can choose a number in between 0.00 and 1.00 to set the base opacity and the plugin will randomly generate snows with slightly varied opacity.
+                color: "#ffffff", // You can set the color of the snow here. This option only accepts HEX color code in full 6 digits. The default value is "#ffffff"
+                windPower: 0, // You can set the wind power here. If you want the wind to blow left, set a positive number in this option., if you want the wind to blow right, set a negative number in this option. The default value is 0.
+                image: 'images/snow.png' // You can define a path to an image to be used instead of a default circle here. The default value is false.
+            });
+
+        })
+    </script>
+</body>
+</html>
